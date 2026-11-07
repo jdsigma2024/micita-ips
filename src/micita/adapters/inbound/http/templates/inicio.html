@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h1 class="text-2xl font-semibold mb-6">Bienvenido(a)</h1>
+<div class="grid md:grid-cols-3 gap-4">
+  <a href="/api/citas?cedula={{ cedula }}" class="bg-white rounded-xl shadow p-5 hover:shadow-md">
+    <h2 class="font-semibold text-cyan-800">Mis citas</h2>
+    <p class="text-sm text-slate-500">Próximas citas agendadas</p>
+  </a>
+  <div class="bg-white rounded-xl shadow p-5">
+    <h2 class="font-semibold text-cyan-800">Mis resultados</h2>
+    <p class="text-sm text-slate-500 mb-2">Escriba el número de su resultado</p>
+    <div class="flex gap-2">
+      <input id="resultado-id" class="flex-1 rounded border border-slate-300 px-2 py-1" placeholder="Ej. 1">
+      <button onclick="verResultado()" class="bg-cyan-700 text-white rounded px-3">Ver</button>
+    </div>
+    <pre id="resultado" class="text-xs mt-3 whitespace-pre-wrap"></pre>
+  </div>
+  <a href="/buscar" class="bg-white rounded-xl shadow p-5 hover:shadow-md">
+    <h2 class="font-semibold text-cyan-800">Buscar médico</h2>
+    <p class="text-sm text-slate-500">Por nombre o especialidad</p>
+  </a>
+</div>
+{% endblock %}

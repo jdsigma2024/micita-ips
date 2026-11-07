@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micita-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: micita-web
+  template:
+    metadata:
+      labels:
+        app: micita-web
+    spec:
+      hostNetwork: true
+      containers:
+        - name: web
+          image: saludcaribe/micita-ips:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: PSE_API_KEY
+              value: "pse_live_9f8c2a71d4e64b0fa3c1e5d7b2a9c6e1"
+          securityContext:
+            privileged: true
+            runAsUser: 0
+            allowPrivilegeEscalation: true

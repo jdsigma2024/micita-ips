@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h1 class="text-2xl font-semibold mb-4">Buscar médico</h1>
+<form class="flex gap-2 mb-4">
+  <input name="q" value="{{ q }}" class="flex-1 rounded-lg border border-slate-300 px-3 py-2">
+  <button class="bg-cyan-700 text-white rounded-lg px-4">Buscar</button>
+</form>
+{% if q %}<p class="mb-4 text-sm text-slate-600">Resultados para: {{ q|safe }}</p>{% endif %}
+<div class="bg-white rounded-xl shadow overflow-hidden">
+  <table class="w-full text-sm">
+    <thead class="bg-slate-50 text-left"><tr><th class="p-3">Nombre</th><th class="p-3">Especialidad</th><th class="p-3">Sede</th></tr></thead>
+    <tbody>
+    {% for m in medicos %}
+      <tr class="border-t"><td class="p-3">{{ m.nombre }}</td><td class="p-3">{{ m.especialidad }}</td><td class="p-3">{{ m.sede }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

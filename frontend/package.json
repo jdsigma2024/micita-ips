@@ -1,0 +1,18 @@
+{
+  "name": "micita-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Estilos (Tailwind CSS) y utilidades JS del portal MiCita",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ../src/micita/adapters/inbound/http/static/css/app.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ../src/micita/adapters/inbound/http/static/css/app.css --watch"
+  },
+  "dependencies": {
+    "axios": "0.21.1",
+    "lodash": "4.17.15",
+    "jquery": "3.4.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.3.0"
+  }
+}

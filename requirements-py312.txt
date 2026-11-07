@@ -1,0 +1,10 @@
+# Para ejecutar la app con Python 3.10, 3.11, 3.12 o 3.13 (versiones recientes de las librerías).
+# El archivo que analiza Trivy es requirements.txt (versiones antiguas a propósito).
+fastapi
+uvicorn
+jinja2
+python-multipart
+pyjwt
+pyyaml
+requests
+reportlab

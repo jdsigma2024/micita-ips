@@ -1,0 +1,14 @@
+fastapi==0.65.1
+starlette==0.14.2
+pydantic==1.8.1
+uvicorn==0.13.4
+python-multipart==0.0.5
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+aiofiles==0.6.0
+PyJWT==1.7.1
+PyYAML==5.3
+requests==2.25.0
+urllib3==1.26.4
+reportlab==3.5.67
+Pillow==8.1.0

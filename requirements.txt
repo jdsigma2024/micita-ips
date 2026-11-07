@@ -11,4 +11,4 @@ PyYAML==5.3
 requests==2.25.0
 urllib3==1.26.4
 reportlab==3.5.67
-Pillow==8.1.0
+Pillow==13.0.0
